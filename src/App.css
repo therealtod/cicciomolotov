@@ -5,15 +5,28 @@
   grid-template-columns: 1fr 2fr;
   grid-template-areas: itemList itemDetail;
 }
-
+ 
 .itemList {
   background-color: aliceblue;
+ 
 }
-
+ 
 .headerList {
-  background-color: green;
+  background: linear-gradient(to top, #013567 0%, #0195FA 100%);;
+  border: 1px solid black;
+  height: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: beige;
+  font-weight: 600;
 }
-
+ 
 .itemDetail {
   background-color: brown;
+}
+ 
+ 
+.list-group-item{
+  padding: 20px 0;
+  border: 1px solid lightgreen;
 }

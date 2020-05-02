@@ -3,12 +3,10 @@ import './Detail.css';
 import {
     useParams
   } from 'react-router-dom' 
-import { getUserDetails } from '../utils/requests'
-function Detail(props) {
+function Detail() {
     let { itemId } = useParams()
-    let userData = getUserDetails(itemId)
     return (
-        <div className="detail">{userData}</div>
+        <div className="detail">{itemId}</div>
     );
 }
 
