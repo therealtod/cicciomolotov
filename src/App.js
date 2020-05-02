@@ -9,9 +9,11 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import { getUsers } from './utils/requests';
 
 function App() {
-  var oggetti = Data.items;
+  var oggetti = getUsers();
+  
   return (
     <Router>
       <div className="App">
@@ -22,7 +24,7 @@ function App() {
               {
                 oggetti.map(data=>{
                   return (
-                    <ListGroup.Item><Link to={"/" + data.key}>{data.name}</Link></ListGroup.Item>
+                    <ListGroup.Item><Link to={"/" + data.id}>{data.name}</Link></ListGroup.Item>
                   );
                 })
               }
@@ -30,13 +32,7 @@ function App() {
           </div>
         </div>
         <Switch>
-        <Route path="/1">
-          <Detail className="itemDetail"/>
-        </Route>
-        <Route path="/2">
-          <Detail className="itemDetail"/>
-        </Route>
-        <Route path="/3">
+        <Route path="/:itemId">
           <Detail className="itemDetail"/>
         </Route>
       </Switch>
