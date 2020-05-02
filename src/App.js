@@ -1,7 +1,8 @@
 import React from 'react';
 import { ListGroup } from 'react-bootstrap';
 import './App.css';
-import Detail from './Components/Detail'
+import Detail from './Components/Detail';
+import Data from './Mockdata/mockdata.json';
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,6 +11,7 @@ import {
 } from "react-router-dom";
 
 function App() {
+  var oggetti = Data.items;
   return (
     <Router>
       <div className="App">
@@ -17,9 +19,13 @@ function App() {
           <div className="headerList"> Item List </div>
           <div className="List">
             <ListGroup>
-              <ListGroup.Item><Link to="/1">Item 1</Link></ListGroup.Item>
-              <ListGroup.Item><Link to="/2">Item 2</Link></ListGroup.Item>
-              <ListGroup.Item><Link to="/3">Item 3</Link></ListGroup.Item>
+              {
+                oggetti.map(data=>{
+                  return (
+                    <ListGroup.Item><Link to={"/" + data.key}>{data.name}</Link></ListGroup.Item>
+                  );
+                })
+              }
             </ListGroup>
           </div>
         </div>
