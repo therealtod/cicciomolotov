@@ -1,7 +1,8 @@
 import React from 'react';
 import { ListGroup } from 'react-bootstrap';
 import logo from './logo.svg';
-import './App.css';
+import './style.css';
+import './Components/Detail'
 import {
   BrowserRouter as Router,
   Switch,
@@ -29,13 +30,13 @@ function App() {
       </div>
       <Switch>
         <Route path="/1">
-          <About />
+          <Detail />
         </Route>
         <Route path="/2">
-          <Topics />
+          <Detail />
         </Route>
         <Route path="/3">
-          <Home />
+          <Detail />
         </Route>
       </Switch>
     </Router>
