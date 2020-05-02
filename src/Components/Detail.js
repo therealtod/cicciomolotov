@@ -1,9 +1,9 @@
 import React from 'react';
-import './style.css';
+import './Detail.css';
 
 function Detail() {
     return (
-        <div>CIAO</div>
+        <div className="detail">CIAO</div>
     );
 }
 

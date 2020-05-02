@@ -1,8 +1,7 @@
 import React from 'react';
 import { ListGroup } from 'react-bootstrap';
-import logo from './logo.svg';
-import './style.css';
-import './Components/Detail'
+import './App.css';
+import Detail from './Components/Detail'
 import {
   BrowserRouter as Router,
   Switch,
@@ -24,21 +23,18 @@ function App() {
             </ListGroup>
           </div>
         </div>
-        <div className="itemDetail">
-          sdadas
-      </div>
-      </div>
-      <Switch>
+        <Switch>
         <Route path="/1">
-          <Detail />
+          <Detail className="itemDetail"/>
         </Route>
         <Route path="/2">
-          <Detail />
+          <Detail className="itemDetail"/>
         </Route>
         <Route path="/3">
-          <Detail />
+          <Detail className="itemDetail"/>
         </Route>
       </Switch>
+      </div>
     </Router>
   );
 }
