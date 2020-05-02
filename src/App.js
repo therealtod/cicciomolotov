@@ -2,6 +2,7 @@ import React,  { useState, useEffect } from 'react';
 
 import './App.css';
 import Detail from './Components/Detail';
+import EmptyDetail from './Components/EmptyDetail';
 import {
   BrowserRouter as Router,
   Switch,
@@ -45,6 +46,9 @@ function App() {
             <Panel items={items}></Panel>
           </div>
           <Switch>
+          <Route exact path="/">
+            <EmptyDetail className="itemEmptyDetail"/>
+          </Route>
           <Route path="/:itemId">
             <Detail className="itemDetail"/>
           </Route>

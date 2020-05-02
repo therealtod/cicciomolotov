@@ -1,5 +1,4 @@
 import React from 'react';
-import { getUsers } from '../utils/requests';
 import { ListGroup } from 'react-bootstrap';
 import {
     Link

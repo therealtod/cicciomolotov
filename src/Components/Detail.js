@@ -6,7 +6,10 @@ import {
 function Detail() {
     let { itemId } = useParams()
     return (
+        <div>
+        <div className="detailHeader">CIAO</div>
         <div className="detail">{itemId}</div>
+        </div>
     );
 }
 
