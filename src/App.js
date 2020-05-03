@@ -9,7 +9,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Panel from './Components/Panel'
+import Panel from './Components/Panel';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
